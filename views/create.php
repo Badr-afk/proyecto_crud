@@ -1,5 +1,5 @@
 <?php
-// SEGURIDAD: Si no pasan por el index, los mandamos al login
+// SEGURIDAD
 if (!defined('SECURE_ACCESS')) {
     header("Location: ../index.php");
     exit();
@@ -7,21 +7,19 @@ if (!defined('SECURE_ACCESS')) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <title>Añadir Juego</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
 
                 <div class="card">
-                    <div class="card-header bg-white border-bottom-0 text-center pt-4">
+                    <div class="card-header text-center pt-4">
                         <h3 class="mb-0 text-primary">✨ Nuevo Videojuego</h3>
                         <p class="text-muted small mt-2">Rellena los datos para añadirlo al catálogo</p>
                     </div>
@@ -43,8 +41,8 @@ if (!defined('SECURE_ACCESS')) {
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label fw-bold text-secondary">Precio (€)</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-light border-end-0">€</span>
-                                        <input type="number" step="0.01" name="precio" class="form-control border-start-0 ps-0" required>
+                                        <span class="input-group-text">€</span>
+                                        <input type="number" step="0.01" name="precio" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
@@ -56,8 +54,8 @@ if (!defined('SECURE_ACCESS')) {
                             <div class="mb-4">
                                 <label class="form-label fw-bold text-secondary">Tipo de Juego</label>
                                 <select name="es_multijugador" class="form-select">
-                                    <option value="0"> Single Player (Un jugador)</option>
-                                    <option value="1"> Multiplayer (Multijugador)</option>
+                                    <option value="0">👤 Single Player (Un jugador)</option>
+                                    <option value="1">👥 Multiplayer (Multijugador)</option>
                                 </select>
                             </div>
 
@@ -72,7 +70,5 @@ if (!defined('SECURE_ACCESS')) {
             </div>
         </div>
     </div>
-
 </body>
-
 </html>

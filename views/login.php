@@ -1,3 +1,10 @@
+<?php
+// SEGURIDAD: Si intentan abrir este archivo directamente, los mandamos al index.
+if (!defined('SECURE_ACCESS')) {
+    header("Location: ../index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +21,7 @@
         <div class="row justify-content-center">
             <div class="col-md-5 col-lg-4">
                 
-                <div class="card shadow-lg border-0">
+                <div class="card">
                     <div class="card-body p-5">
                         
                         <div class="text-center mb-4">
@@ -39,16 +46,16 @@
                             <div class="mb-3">
                                 <label class="form-label fw-bold text-secondary small text-uppercase">Usuario</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-person"></i></span>
-                                    <input type="text" name="usuario" class="form-control border-start-0 ps-0" placeholder="Ej: gamer" required>
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input type="text" name="usuario" class="form-control" placeholder="Ej: gamer" required>
                                 </div>
                             </div>
 
                             <div class="mb-4">
                                 <label class="form-label fw-bold text-secondary small text-uppercase">Contraseña</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-lock"></i></span>
-                                    <input type="password" name="password" class="form-control border-start-0 ps-0" placeholder="••••" required>
+                                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                    <input type="password" name="password" class="form-control" placeholder="••••" required>
                                 </div>
                             </div>
 
@@ -59,10 +66,6 @@
                             </div>
 
                         </form>
-                    </div>
-                    
-                    <div class="card-footer bg-light border-0 text-center py-3">
-                        <small class="text-muted">¿No tienes cuenta? Contacta al administrador.</small>
                     </div>
                 </div>
 
