@@ -54,8 +54,8 @@ if (!defined('SECURE_ACCESS')) {
                             <div class="mb-4">
                                 <label class="form-label fw-bold text-secondary">Tipo de Juego</label>
                                 <select name="es_multijugador" class="form-select">
-                                    <option value="0">👤 Single Player (Un jugador)</option>
-                                    <option value="1">👥 Multiplayer (Multijugador)</option>
+                                    <option value="0"> Single Player (Un jugador)</option>
+                                    <option value="1"> Multiplayer (Multijugador)</option>
                                 </select>
                             </div>
 

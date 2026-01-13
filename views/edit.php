@@ -20,7 +20,7 @@ if (!defined('SECURE_ACCESS')) {
 
                 <div class="card">
                     <div class="card-header text-center pt-4">
-                        <h3 class="mb-0 text-primary">✏️ Editar Videojuego</h3>
+                        <h3 class="mb-0 text-primary"> Editar Videojuego</h3>
                         <p class="text-muted small mt-2">Modificando: <strong><?php echo $juego['titulo']; ?></strong></p>
                     </div>
 
