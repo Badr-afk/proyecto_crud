@@ -1,6 +1,6 @@
-# GameZone - Sistema CRUD MVC en PHP
+# GameZone - Sistema CRUD MVC en PHP (Versión Cyberpunk)
 
-Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de videojuegos. Este proyecto implementa una arquitectura MVC (Modelo-Vista-Controlador) estricta, utilizando PHP puro, PDO para la base de datos, Bootstrap 5 para el diseño y JavaScript para validaciones en el lado del cliente.
+Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de videojuegos. Este proyecto implementa una arquitectura MVC (Modelo-Vista-Controlador) estricta, utilizando PHP puro, PDO para la base de datos y un diseño visual futurista personalizado construido con CSS puro (sin frameworks externos).
 
 ## Características Principales
 
@@ -9,22 +9,21 @@ Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de v
     * Uso de sentencias preparadas con PDO para prevenir inyección SQL.
     * Protección contra acceso directo a las vistas mediante validación de constantes.
     * Gestión de sesiones de usuario para proteger rutas privadas.
-* **Funcionalidad CRUD:**
+* **Funcionalidad CRUD Avanzada:**
     * Create: Alta de nuevos videojuegos en el sistema.
-    * Read: Listado de registros en el panel de control.
+    * Read: Listado de registros con **Buscador Integrado** (filtro por título o desarrolladora).
     * Update: Edición de datos de videojuegos existentes.
     * Delete: Eliminación de registros con confirmación previa.
 * **Experiencia de Usuario (UX):**
-    * **Validación Cliente:** Script en JavaScript nativo que valida formularios antes del envío (campos vacíos, precios negativos).
-    * **Feedback Visual:** Animaciones CSS (efecto "temblor") y resaltado en rojo para errores de validación.
-    * **Interfaz:** Diseño responsivo y limpio utilizando Bootstrap 5 y CSS personalizado.
+    * **Mensajes Flash:** Sistema de notificaciones temporales para confirmar acciones (creación, edición o borrado exitoso).
+    * **Validación Cliente:** Script en JavaScript nativo que valida formularios antes del envío (campos vacíos, precios negativos, efectos visuales de error).
+    * **Diseño Futurista:** Interfaz personalizada "Cyberpunk" desarrollada con CSS3 nativo (Grid/Flexbox), sin dependencias de Bootstrap.
 
 ## Tecnologías Utilizadas
 
 * **Lenguaje Backend:** PHP 7.4 / 8.0+
-* **Lenguaje Frontend:** HTML5, CSS3, JavaScript (ES6)
+* **Lenguaje Frontend:** HTML5, CSS3 (Custom), JavaScript (ES6)
 * **Base de Datos:** MySQL / MariaDB
-* **Framework CSS:** Bootstrap 5 (CDN)
 * **Control de Versiones:** Git
 
 ## Guía de Instalación
@@ -75,16 +74,15 @@ El proyecto sigue la siguiente organización de directorios:
 * **config/**: Contiene la clase de conexión a la base de datos (Database.php).
 * **controllers/**: Lógica de la aplicación.
     * LoginController.php: Gestiona la autenticación.
-    * JuegoController.php: Gestiona las operaciones CRUD.
+    * JuegoController.php: Gestiona las operaciones CRUD y la búsqueda.
 * **models/**: Interacción con la base de datos.
     * Usuario.php: Consultas relacionadas con usuarios.
-    * Juego.php: Consultas relacionadas con videojuegos.
+    * Juego.php: Consultas relacionadas con videojuegos (incluye filtros de búsqueda).
 * **views/**: Interfaz de usuario (HTML/PHP).
     * login.php: Formulario de acceso.
-    * dashboard.php: Vista principal.
+    * dashboard.php: Vista principal con tabla de datos y barra de búsqueda.
     * create.php: Formulario de alta.
     * edit.php: Formulario de edición.
-* **css/**: Hojas de estilo personalizadas (style.css).
-* **js/**: Scripts del lado del cliente.
-    * validaciones.js: Lógica de validación de formularios y animaciones.
+* **css/**: Hoja de estilos principal (style.css) con diseño responsivo propio.
+* **js/**: Scripts del lado del cliente (validaciones.js).
 * **index.php**: Controlador frontal (Enrutador) de la aplicación.
