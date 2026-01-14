@@ -1,12 +1,13 @@
 <?php
 // SEGURIDAD
 if (!defined('SECURE_ACCESS')) {
-    header("Location: ../index.php"); 
+    header("Location: ../index.php");
     exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Panel de Control</title>
@@ -14,6 +15,7 @@ if (!defined('SECURE_ACCESS')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-custom navbar-expand-lg mb-4 px-4">
@@ -87,4 +89,5 @@ if (!defined('SECURE_ACCESS')) {
     </div>
 
 </body>
+
 </html>

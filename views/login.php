@@ -7,6 +7,7 @@ if (!defined('SECURE_ACCESS')) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +16,16 @@ if (!defined('SECURE_ACCESS')) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5 col-lg-4">
-                
+
                 <div class="card">
                     <div class="card-body p-5">
-                        
+
                         <div class="text-center mb-4">
                             <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
                                 <i class="bi bi-controller text-primary" style="font-size: 2.5rem;"></i>
@@ -32,7 +34,7 @@ if (!defined('SECURE_ACCESS')) {
                             <p class="text-muted small">Gestión de Catálogo</p>
                         </div>
 
-                        <?php if(isset($_GET['error'])): ?>
+                        <?php if (isset($_GET['error'])): ?>
                             <div class="alert alert-danger d-flex align-items-center py-2 shadow-sm" role="alert">
                                 <i class="bi bi-exclamation-triangle-fill me-2"></i>
                                 <div class="small">
@@ -42,7 +44,7 @@ if (!defined('SECURE_ACCESS')) {
                         <?php endif; ?>
 
                         <form action="index.php?action=authenticate" method="POST">
-                            
+
                             <div class="mb-3">
                                 <label class="form-label fw-bold text-secondary small text-uppercase">Usuario</label>
                                 <div class="input-group">
@@ -74,4 +76,5 @@ if (!defined('SECURE_ACCESS')) {
     </div>
 
 </body>
+
 </html>
