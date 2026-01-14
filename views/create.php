@@ -72,6 +72,7 @@ if (!defined('SECURE_ACCESS')) {
             </div>
         </div>
     </div>
+    <script src="../js/validaciones.js"></script>
 </body>
 
 </html>
