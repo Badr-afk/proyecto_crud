@@ -13,7 +13,7 @@ if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
     <div class="flex-center">
         <div class="card" style="max-width: 600px;">
             <div class="card-header">
-                <h3 class="card-title">✨ NUEVO VIDEOJUEGO</h3>
+                <h3 class="card-title"> NUEVO VIDEOJUEGO</h3>
                 <p class="text-muted">Añadir registro al sistema</p>
             </div>
 
