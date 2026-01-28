@@ -2,7 +2,10 @@
 // config/Database.php
 class Database
 {
-    private $host = 'localhost';
+    // --- CAMBIO AQUÍ: Usamos la IP directa ---
+    private $host = '127.0.0.1'; 
+    // -----------------------------------------
+    
     private $db_name = 'gestion_juegos';
     private $username = 'root';
     private $password = '';

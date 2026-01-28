@@ -1,14 +1,19 @@
 <?php
-if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
+if (!defined('SECURE_ACCESS')) {
+    header("Location: ../index.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - CyberZone</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -20,26 +25,27 @@ if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
     </nav>
 
     <div class="container">
-        
-        <?php if(isset($_SESSION['mensaje'])): ?>
+
+        <?php if (isset($_SESSION['mensaje'])): ?>
             <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?>">
                 <strong>SISTEMA:</strong> <?= $_SESSION['mensaje']; ?>
             </div>
-            <?php unset($_SESSION['mensaje']); unset($_SESSION['tipo_mensaje']); ?>
+            <?php unset($_SESSION['mensaje']);
+            unset($_SESSION['tipo_mensaje']); ?>
         <?php endif; ?>
 
         <div class="row" style="justify-content: space-between;">
             <div>
                 <h2 style="color: var(--neon-pink);">DATABASE</h2>
             </div>
-            
+
             <div class="search-form">
                 <form action="index.php" method="GET" style="display:flex; gap:5px;">
                     <input type="hidden" name="action" value="dashboard">
-                    <input type="text" name="busqueda" class="form-control" placeholder="Buscar..." 
-                           value="<?php echo isset($_GET['busqueda']) ? $_GET['busqueda'] : ''; ?>">
-                    
-                    <?php if(isset($_GET['busqueda']) && $_GET['busqueda'] != ''): ?>
+                    <input type="text" name="busqueda" class="form-control" placeholder="Buscar..."
+                        value="<?php echo isset($_GET['busqueda']) ? $_GET['busqueda'] : ''; ?>">
+
+                    <?php if (isset($_GET['busqueda']) && $_GET['busqueda'] != ''): ?>
                         <a href="index.php?action=dashboard" class="btn btn-danger">X</a>
                     <?php else: ?>
                         <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
@@ -97,4 +103,5 @@ if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
         </div>
     </div>
 </body>
+
 </html>

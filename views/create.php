@@ -1,19 +1,20 @@
 <?php
+// views/create.php
 if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Añadir Juego</title>
+    <title>Nuevo Juego - CyberZone</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="flex-center">
         <div class="card" style="max-width: 600px;">
             <div class="card-header">
-                <h3 class="card-title">NUEVO REGISTRO</h3>
-                <p class="text-muted">Ingresar datos en el sistema</p>
+                <h3 class="card-title">✨ NUEVO VIDEOJUEGO</h3>
+                <p class="text-muted">Añadir registro al sistema</p>
             </div>
 
             <form action="index.php?action=store" method="POST">
@@ -49,11 +50,11 @@ if (!defined('SECURE_ACCESS')) { header("Location: ../index.php"); exit(); }
 
                 <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
                     <a href="index.php?action=dashboard" class="btn btn-danger">CANCELAR</a>
-                    <button type="submit" class="btn btn-primary">GUARDAR DATOS</button>
+                    <button type="submit" class="btn btn-primary">GUARDAR</button>
                 </div>
             </form>
         </div>
     </div>
-    <script src="../js/validaciones.js"></script>
+    <script src="js/validaciones.js"></script>
 </body>
 </html>

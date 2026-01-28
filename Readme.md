@@ -1,6 +1,20 @@
-# GameZone - Sistema CRUD MVC en PHP (Versión Cyberpunk)
+# GameZone - Sistema CRUD MVC en PHP
 
-Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de videojuegos. Este proyecto implementa una arquitectura MVC (Modelo-Vista-Controlador) estricta, utilizando PHP puro, PDO para la base de datos y un diseño visual futurista personalizado construido con CSS puro (sin frameworks externos).
+Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de videojuegos. Este proyecto implementa una arquitectura MVC (Modelo-Vista-Controlador) estricta, utilizando PHP nativo, PDO para la base de datos y un diseño visual personalizado construido con CSS puro (sin frameworks externos como Bootstrap).
+
+## Galería del Proyecto
+
+### 1. Pantalla de Acceso
+Diseño minimalista con validaciones en tiempo real.
+![Vista del Login](img/login.png)
+
+### 2. Panel Principal (Dashboard)
+Gestión completa de datos con tabla responsive y barra de búsqueda integrada.
+![Vista del Dashboard](img/dashboard.png)
+
+### 3. Edición de Registros
+Formulario reutilizable con carga dinámica de datos existentes.
+![Vista de Edición](img/edit.png)
 
 ## Características Principales
 
@@ -11,13 +25,13 @@ Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de v
     * Gestión de sesiones de usuario para proteger rutas privadas.
 * **Funcionalidad CRUD Avanzada:**
     * Create: Alta de nuevos videojuegos en el sistema.
-    * Read: Listado de registros con **Buscador Integrado** (filtro por título o desarrolladora).
+    * Read: Listado de registros con funcionalidad de búsqueda por título o desarrolladora.
     * Update: Edición de datos de videojuegos existentes.
     * Delete: Eliminación de registros con confirmación previa.
 * **Experiencia de Usuario (UX):**
-    * **Mensajes Flash:** Sistema de notificaciones temporales para confirmar acciones (creación, edición o borrado exitoso).
-    * **Validación Cliente:** Script en JavaScript nativo que valida formularios antes del envío (campos vacíos, precios negativos, efectos visuales de error).
-    * **Diseño Futurista:** Interfaz personalizada "Cyberpunk" desarrollada con CSS3 nativo (Grid/Flexbox), sin dependencias de Bootstrap.
+    * **Notificaciones del Sistema:** Mensajes temporales (Flash Messages) para confirmar acciones exitosas o errores.
+    * **Validación en Cliente:** Script en JavaScript nativo que valida formularios antes del envío (campos vacíos, coherencia de datos).
+    * **Diseño Personalizado:** Interfaz desarrollada con CSS3 nativo (Grid y Flexbox), eliminando dependencias de librerías externas.
 
 ## Tecnologías Utilizadas
 
@@ -44,7 +58,6 @@ Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de v
         password VARCHAR(255) NOT NULL
     );
 
-    -- Usuario por defecto
     INSERT INTO usuarios (usuario, password) VALUES ('gamer', '1234');
 
     CREATE TABLE videojuegos (
@@ -62,7 +75,7 @@ Bienvenido a GameZone, una aplicación web para la gestión de un catálogo de v
 
 ## Credenciales de Acceso
 
-Para acceder al sistema, utiliza el siguiente usuario preconfigurado:
+Para acceder al sistema como administrador, utiliza el siguiente usuario de prueba:
 
 * **Usuario:** gamer
 * **Contraseña:** 1234
@@ -73,16 +86,17 @@ El proyecto sigue la siguiente organización de directorios:
 
 * **config/**: Contiene la clase de conexión a la base de datos (Database.php).
 * **controllers/**: Lógica de la aplicación.
-    * LoginController.php: Gestiona la autenticación.
-    * JuegoController.php: Gestiona las operaciones CRUD y la búsqueda.
+    * LoginController.php: Gestiona la autenticación y sesiones.
+    * JuegoController.php: Gestiona las operaciones CRUD y el buscador.
 * **models/**: Interacción con la base de datos.
     * Usuario.php: Consultas relacionadas con usuarios.
-    * Juego.php: Consultas relacionadas con videojuegos (incluye filtros de búsqueda).
+    * Juego.php: Consultas relacionadas con videojuegos (incluye filtros SQL).
 * **views/**: Interfaz de usuario (HTML/PHP).
     * login.php: Formulario de acceso.
-    * dashboard.php: Vista principal con tabla de datos y barra de búsqueda.
-    * create.php: Formulario de alta.
-    * edit.php: Formulario de edición.
-* **css/**: Hoja de estilos principal (style.css) con diseño responsivo propio.
+    * dashboard.php: Vista principal con tabla de datos y controles.
+    * create.php: Formulario para crear registros nuevos.
+    * edit.php: Formulario para editar registros existentes.
+* **css/**: Hoja de estilos principal (style.css).
 * **js/**: Scripts del lado del cliente (validaciones.js).
+* **img/**: Imágenes y capturas de pantalla del proyecto.
 * **index.php**: Controlador frontal (Enrutador) de la aplicación.
