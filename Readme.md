@@ -1,8 +1,8 @@
-# 🎮 GameZone - Sistema CRUD MVC (Cyberpunk Edition)
+# GameZone - Sistema CRUD MVC (Cyberpunk Edition)
 
 Bienvenido a **GameZone**, una aplicación web completa para la gestión de un catálogo de videojuegos. Este proyecto destaca por su arquitectura MVC estricta y su diseño futurista personalizado sin frameworks externos.
 
-## 📸 Galería del Proyecto
+## Galería del Proyecto
 
 ### 1. Pantalla de Acceso (Login)
 Diseño minimalista con validaciones en tiempo real y efectos visuales.
@@ -18,7 +18,7 @@ Formulario reutilizable con carga dinámica de datos existentes.
 
 ---
 
-## 🚀 Características Técnicas
+## Características Técnicas
 
 * **Arquitectura:** MVC (Modelo-Vista-Controlador) puro.
 * **Backend:** PHP Nativo + PDO (MySQL).
@@ -32,7 +32,7 @@ Formulario reutilizable con carga dinámica de datos existentes.
     * **Feedback:** Sistema de notificaciones Flash (Alertas verdes/rojas).
     * **Validación JS:** Scripts del lado del cliente para validar formularios.
 
-## 🛠️ Instalación
+## Instalación
 
 1.  Clonar el repositorio en `htdocs`.
 2.  Importar el script SQL adjunto en phpMyAdmin (Base de datos: `gestion_juegos`).
