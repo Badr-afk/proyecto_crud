@@ -19,7 +19,7 @@ Gestión centralizada con tabla responsive, buscador integrado y notificaciones 
 
 ### 3. Gestión de Datos (CRUD)
 Formularios dinámicos para la creación y edición de registros, reutilizando componentes visuales.
-![Vista de Edición](img/edit.png)
+![Vista de Edición](img/edit.PNG)
 
 ## Arquitectura y Tecnologías
 
